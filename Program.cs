@@ -1,9 +1,14 @@
+using EXO2.Controller;
+using EXO2.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+
 
 var app = builder.Build();
 
@@ -15,7 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
-
+app.MapControllers();
 app.UseHttpsRedirection();
 app.Run();
 
