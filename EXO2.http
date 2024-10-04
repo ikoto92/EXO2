@@ -1,0 +1,6 @@
+@EXO2_HostAddress = http://localhost:5293
+
+GET {{EXO2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
